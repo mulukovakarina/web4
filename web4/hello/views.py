@@ -7,7 +7,11 @@ def home(request):
 
 
 def about(request):
-    return render(request, "about.html")
+    context = {
+        "phone": "7-999-999-9999"
+    }
+
+    return render(request, "about.html", context=context)
 
 
 def math(request):
